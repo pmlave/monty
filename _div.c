@@ -19,7 +19,7 @@ void _div(au stack_t **stack, au unsigned int line_number)
 		fprintf(stderr, "L%u: division by zero\n", vars->line_number);
 		_freeing();
 	}
-	(vars->stack)->next->n = (vars->stack)->n / (vars->stack)->next->n;
+	(vars->stack)->next->n = (vars->stack)->next->n / (vars->stack)->n;
 	_pop(&(vars->stack), vars->line_number);
 
 
