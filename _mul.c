@@ -14,7 +14,7 @@ void _mul(au stack_t **stack, au unsigned int line_number)
 			vars->line_number);
 		_freeing();
 	}
-	(vars->stack)->next->n *= (vars->stack)->n;
+	(vars->stack)->next->n = (vars->stack)->n * (vars->stack)->next->n;
 	_pop(&(vars->stack), vars->line_number);
 
 
