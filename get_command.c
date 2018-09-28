@@ -18,7 +18,8 @@ void get_command(void)
 	{
 		vars->command = strtok(vars->file_content, " \n");
 		vars->value = strtok(NULL, " \n");
-		get_func();
+		if (vars->command[0] != '#')
+			get_func();
 		vars->line_number++;
 	}
 	fclose(vars->fd);
