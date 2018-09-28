@@ -9,6 +9,7 @@ int (*get_func(void))(stack_t **stack, unsigned int line_number)
 		{"push", _push},
 		{"pall", _pall},
 		{"pint", _pint},
+		{"pop", _pop},
 		{NULL, NULL}
 	};
 	int i = 0;
