@@ -52,6 +52,8 @@ void _push(au stack_t **stack, au unsigned int line_number);
 void _pall(au stack_t **stack, au unsigned int line_number);
 void _pint(au stack_t **stack, au unsigned int line_number);
 void _pop(au stack_t **stack, au unsigned int line_number);
+void _swap(au stack_t **stack, au unsigned int line_number);
+void _add(au stack_t **stack, au unsigned int line_number);
 int (*get_func(void))(stack_t **stack, unsigned int line_number);
 void get_command(void);
 void _freeing(void);
