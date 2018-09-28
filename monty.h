@@ -30,6 +30,7 @@ typedef struct variables_s
 	char *command;
 	char *value;
 	char *file_content;
+	FILE *fd;
 	unsigned int line_number;
 } variables_t;
 /**
@@ -55,6 +56,7 @@ void _pop(au stack_t **stack, au unsigned int line_number);
 void _swap(au stack_t **stack, au unsigned int line_number);
 void _add(au stack_t **stack, au unsigned int line_number);
 void _nop(au stack_t **stack, au unsigned int line_number);
+void _sub(au stack_t **stack, au unsigned int line_number);
 int (*get_func(void))(stack_t **stack, unsigned int line_number);
 void get_command(void);
 void _freeing(void);
