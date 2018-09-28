@@ -8,5 +8,4 @@
 
 void _nop(au stack_t **stack, au unsigned int line_number)
 {
-	return;
 }
