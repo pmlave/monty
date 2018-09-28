@@ -7,6 +7,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include <ctype.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -59,6 +60,7 @@ void _nop(au stack_t **stack, au unsigned int line_number);
 void _sub(au stack_t **stack, au unsigned int line_number);
 void _mul(au stack_t **stack, au unsigned int line_number);
 void _div(au stack_t **stack, au unsigned int line_number);
+void _mod(au stack_t **stack, au unsigned int line_number);
 int (*get_func(void))(stack_t **stack, unsigned int line_number);
 void get_command(void);
 void _freeing(void);
