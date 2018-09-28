@@ -10,11 +10,12 @@ void _push(au stack_t **stack, au unsigned int line_number)
 {
 	stack_t *current = vars->stack;
 	stack_t *new;
+	int i = 0;
 
 	new = malloc(sizeof(stack_t));
 	if (!new)
 	{
-		printf("Error: malloc failed\n");
+		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
 
@@ -26,7 +27,18 @@ void _push(au stack_t **stack, au unsigned int line_number)
 		fprintf(stderr, "L%u: usage: push integer\n",
 			vars->line_number);
 		_freeing();
-		exit(EXIT_FAILURE);
+	}
+	while (vars->value[i] != '\0')
+	{
+		if ((vars->value[i] >= 48 && vars->value[i] <= 57) ||
+			vars->value[i] == 45)
+			i++;
+		else
+		{
+			fprintf(stderr, "L%u: usage: push integer\n",
+				vars->line_number);
+			_freeing();
+		}
 	}
 	new->n = atoi(vars->value);
 	if (current)
