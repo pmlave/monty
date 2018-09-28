@@ -9,7 +9,7 @@ variables_t *vars;
 int main(int argc, char **argv)
 {
 
-	variables_t temp = {NULL, NULL, NULL, NULL, NULL, 1};
+	variables_t temp = {NULL, NULL, NULL, NULL, NULL, NULL, 1};
 
 	vars = &temp;
 	vars->argv = argv;

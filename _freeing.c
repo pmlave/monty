@@ -17,6 +17,7 @@ void _freeing(void)
 		free((vars->stack)->prev);
 	}
 	free(vars->file_content);
+	fclose(vars->fd);
 	exit(EXIT_FAILURE);
 
 }
