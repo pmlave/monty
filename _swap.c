@@ -8,7 +8,7 @@
 
 void _swap(au stack_t **stack, au unsigned int line_number)
 {
-	stack_t *temp = vars->stack;
+	int temp;
 
 	if (!vars->stack || !((vars->stack)->next))
 	{
@@ -18,13 +18,8 @@ void _swap(au stack_t **stack, au unsigned int line_number)
 	}
 	if ((vars->stack)->next)
 	{
-		if (!(vars->stack)->next->next)
-			(vars->stack)->next = NULL;
-		else
-			(vars->stack)->next = (vars->stack)->next->next;
-		(vars->stack)->prev = temp->next;
-		temp->next->prev = NULL;
-		temp->next->next = temp;
-		vars->stack = (vars->stack)->prev;
+		temp = (vars->stack)->n;
+		(vars->stack)->n = (vars->stack)->next->n;
+		(vars->stack)->next->n = temp;
 	}
 }
