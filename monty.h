@@ -61,6 +61,7 @@ void _sub(au stack_t **stack, au unsigned int line_number);
 void _mul(au stack_t **stack, au unsigned int line_number);
 void _div(au stack_t **stack, au unsigned int line_number);
 void _mod(au stack_t **stack, au unsigned int line_number);
+void _pchar(au stack_t **stack, au unsigned int line_number);
 int (*get_func(void))(stack_t **stack, unsigned int line_number);
 void get_command(void);
 void _freeing(void);
